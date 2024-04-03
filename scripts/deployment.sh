@@ -20,6 +20,6 @@ MESSAGE="<b>🚀DEPLOYMENT STATUS</b>: $1%0A%0A<b>🔁VERSION</b>: $BUILD_NUMBER
 curl https://api.telegram.org/bot${BOT_TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d text="${MESSAGE}" -d parse_mode="HTML"
 
 # Send Email
-echo -e "${MESSAGE}" | mail -s "DEPLOYMENT STATUS" "${EMAIL_RECIPIENT}"
+# echo -e "${MESSAGE}" | mail -s "DEPLOYMENT STATUS" "${EMAIL_RECIPIENT}"
 
 # echo "Test message" | mail -s "Test subject" vatsenghong.com

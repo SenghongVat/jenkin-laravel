@@ -3,7 +3,6 @@ pipeline {
     environment {
         BOT_TOKEN = '6539250164:AAHI-HPRpX2dhlhRqa3sdyXK57bwL5Ayhfg'
         CHAT_ID = '906725789'
-        EMAIL_RECIPIENT = 'vatsenghong@gmail.com'
     }
 
 
@@ -31,14 +30,14 @@ pipeline {
     }
     post {
         success {
-            sh '''
-                bash scripts/deployment.sh SUCCESS 🟢
-            '''
+            script {
+                sh "bash scripts/deployment.sh SUCCESS"
+            }
         }
         failure {
-            sh '''
-                bash scripts/deployment.sh FAILED 🔴
-            '''
+            script {
+                sh "bash scripts/deployment.sh FAILED"
+            }
         }
     }
     // post {
