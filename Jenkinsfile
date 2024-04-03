@@ -1,8 +1,8 @@
 pipeline {
     agent any // windows agent, Jenkins-Laravel (other machine)
     environment {
-        BOT_TOKEN = credentials('telegram_bot_token')
-        CHAT_ID = credentials('telegram_chat_id')
+        BOT_TOKEN = '6539250164:AAHI-HPRpX2dhlhRqa3sdyXK57bwL5Ayhfg'
+        CHAT_ID = '906725789'
         EMAIL_RECIPIENT = 'vatsenghong@gmail.com'
     }
 
